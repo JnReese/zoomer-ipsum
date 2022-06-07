@@ -1,0 +1,19 @@
+.copy__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.text__output {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons__Container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.sentance__select {
+  margin-right: 1rem;
+}

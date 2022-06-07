@@ -1,5 +1,11 @@
 .lorem__container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
   margin-top: 2rem;
+}
+
+.innerText {
+  padding: 1rem;
+  overflow: auto;
 }

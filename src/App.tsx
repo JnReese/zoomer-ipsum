@@ -1,10 +1,10 @@
 import "./App.css";
-import LoremOutput from "./components/LoremOutput";
+import InputAndButtons from "./components/InputAndButtons";
 
 function App() {
   return (
     <div className="App">
-      <LoremOutput />
+      <InputAndButtons />
     </div>
   );
 }
