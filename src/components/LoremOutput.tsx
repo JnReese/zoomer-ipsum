@@ -1,16 +1,21 @@
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import "../components/LoremOutput.css";
-import LoremString from "../components/loremtext";
-import Words from "../words";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
-export default function SimplePaper({ outputSentances }: any) {
-  useEffect(() => {}, []);
+type Props = {
+  children?: React.ReactNode;
+};
 
-  /*   const getIpsum = (num: number) => {
-      return  lorem(num)
-    } */
+export default function SimplePaper({ children }: Props) {
+  const ref = useRef<HTMLHeadingElement>(null);
+  const checkRef = () => {
+    let text = ref.current?.innerText;
+    navigator.clipboard.writeText(text ?? "");
+  };
+
   return (
     <div className="lorem__container">
       <Box
@@ -19,15 +24,20 @@ export default function SimplePaper({ outputSentances }: any) {
           flexWrap: "wrap",
           "& > :not(style)": {
             m: 1,
-            width: 650,
-            height: 500,
+            width: 450,
+            height: 300,
           },
         }}
       >
-        <Paper className="innerText" elevation={3}>
-          {outputSentances}
+        <Paper className="innerText" elevation={3} ref={ref}>
+          {children}
         </Paper>
       </Box>
+      <Stack spacing={2} direction="row">
+        <Button variant="contained" onClick={checkRef}>
+          Copy Text
+        </Button>
+      </Stack>
     </div>
   );
 }

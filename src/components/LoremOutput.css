@@ -1,11 +1,14 @@
 .lorem__container {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  margin-top: 2rem;
+  text-align: left;
 }
 
 .innerText {
   padding: 1rem;
   overflow: auto;
+}
+
+Button {
+  margin-left: 5px;
 }
