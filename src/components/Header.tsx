@@ -3,9 +3,5 @@ type PassedTypes = {
 };
 
 export const Header = ({ type }: PassedTypes) => {
-  const chooseHeader = () => {
-    return type === "zoomer" ? "ZoomerIpsum" : "BoomerIpsum";
-  };
-
-  return <h1>{chooseHeader()}</h1>;
+  return <h1>{type}</h1>;
 };

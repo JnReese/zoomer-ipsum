@@ -6,11 +6,11 @@ function App() {
   return (
     <div className="App">
       <div className="zoom__container">
-        <Header type="zoomer" />
+        <Header type="Zoomer Ipsum" />
         <InputAndButtons type="zoomer" />
       </div>
       <div className="boom__container">
-        <Header type="boomer" />
+        <Header type="Boomer Ipsum" />
         <InputAndButtons type="boomer" />
       </div>
     </div>

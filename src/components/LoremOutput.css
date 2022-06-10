@@ -12,3 +12,12 @@
 Button {
   margin-left: 5px;
 }
+
+@media only screen and (max-width: 700px) {
+  .lorem__container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 400px;
+  }
+}
